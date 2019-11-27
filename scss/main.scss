@@ -1,0 +1,47 @@
+// Colors
+$clr-red: #d61f26;
+$clr-green: #40b549;
+$clr-blue: #1d274b;
+
+$greys: (
+light: #c4c6c8,
+medium: #5a5b5d,
+dark: #262626,     
+);
+
+@function grey($shade) {
+$value: map-get($greys, $shade);
+@return $value;
+}
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|ZCOOL+QingKe+HuangYou');
+
+$ff-josefin: 'ZCOOL QingKe HuangYou', cursive;
+$ff-fredoka: 'Fredoka One', cursive;
+
+
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+padding: 0;
+text-align: center;
+overflow: hidden;
+font-family: $ff-josefin;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+
+@import 'layout/box';

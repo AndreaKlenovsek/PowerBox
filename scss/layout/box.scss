@@ -1,0 +1,179 @@
+
+
+.generator {
+padding-top: 2.5em;
+display: grid;
+place-items: center;
+}
+
+.cabinet {
+position: relative;
+max-width: 600px;
+}
+
+.cabinet-img {
+width: 700px;
+}
+
+.cable {
+    height: 778px;
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    z-index: -1;
+    animation: move 5s forwards;
+
+
+@keyframes move {
+from {
+left: -5%;
+}
+
+to {
+left:5px;
+}
+}
+}
+
+
+
+.sign-up {
+position: absolute;
+top: 2%;
+bottom: 0;
+left: 1em;
+right: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+max-width: 400px;
+max-height: 500px;
+margin: 0 auto;
+
+&__btn {
+display: inline-block;
+background: red;
+height: 80px;
+width: 80px;
+border-radius: 50%;
+margin-left: -18em;
+margin-top: 2em;
+color: #c4c6c8;
+transition: background 200ms;
+font-family: $ff-fredoka;
+box-shadow: 0 0 1em red;
+
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+&__name, &__mail {
+    display: block;
+    width: 900px;
+    font-weight: bold;
+    margin-top: 1em;
+}
+}
+
+
+.warning {
+    position: relative;
+    top: -2.7em;
+    
+    h2 {
+    font-size: 1rem;
+    letter-spacing: 7px;
+    top: 0;
+    display: inline-block;
+    margin-top: 0;
+    
+    &::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: black;
+    margin: 0 auto;
+    display: block;
+    }
+    }
+    
+    p {
+    font-size: .8rem;
+    margin: 0 auto;
+    font-weight: 700;
+    }
+    }
+
+
+  .sign-up .text {
+  background: gray(light);
+  color: black;
+  font-size: 1rem;
+  border:none;
+  padding: .5em 1em;
+  text-align: center;
+  margin-top: .5em;
+  width: 33%;
+  }
+
+.check {
+display: none;
+  }
+
+.item {
+ margin-top: 1em; 
+}
+
+.label-text::before {
+content: '';
+height: 10px;
+width: 10px;
+background: red;
+box-shadow: 0 0 .65em red;
+display: inline-block;
+border-radius: 50%;
+border: 1px solid grey(medium);
+margin-right: 1em;
+}
+
+.check:checked + .label-text::before {
+background: $clr-green;
+box-shadow: 0 0 .4em $clr-green;
+   
+}
+
+
+.alert {
+font-weight: 700;
+margin-top: 1em;
+}
+
+.alert.success {
+color: $clr-green;
+}
+
+.alert.warning {
+color: red;
+}
+
+.title {
+font-size: 2.5rem;
+color: grey(light);
+margin: 1em auto;
+border: 1px solid $clr-green;
+background: $clr-green;
+padding: 1em 1em;;
+}
+
+.landing-text{
+font-size: 1.8rem;
+margin: 2.5em 5em;
+padding: 1em 1em;
+color: white;
+background: rgba(0,0,0, .8);
+}
+
+.message {
+margin-top: 4em;
+}
